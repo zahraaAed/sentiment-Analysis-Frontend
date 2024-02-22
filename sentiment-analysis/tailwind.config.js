@@ -9,7 +9,8 @@ export default {
       colors:{
         'Background':'#D0B5DD',
         'content':'#49003d',
-        'contentBackground':'#1b2028',
+        'contentBackground':'#8e134f',
+        'emailbg':'#e8f0fe'
       },
       width: {
         "150px": "150px",

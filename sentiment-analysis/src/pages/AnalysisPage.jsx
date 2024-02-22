@@ -107,13 +107,16 @@ function App() {
       />
       <button
         onClick={handleSubmit}
-        className="mt-8 mx-auto w-1/4 flex justify-center items-center cursor-pointer py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-gradient-to-r from-pink-500 to-content hover:from-pink-600 hover:to-purple-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+        className="text-2xl mt-8 mx-auto w-1/4 flex justify-center items-center cursor-pointer py-2 px-4 border border-transparent rounded-full shadow-sm  font-medium text-white bg-gradient-to-r from-pink-500 to-content hover:from-pink-600 hover:to-purple-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
       >
         Analyze
       </button>
-      <div className='flex flex-col'>
+      <div className='flex flex-col justify-center items-center h-screen'>
       {chartData && <Bar width="700" height="530" data={chartData} options={options} className=' mt-16 mx-auto block w-5/6 h-32 px-3 py-2 shadow-lg shadow-indigo-500/50 bg-blend-difference placeholder-gray-500 focus:outline-none focus:ring-pink-500 focus:border-pink-500 sm:text-lg' />}
-      <p className='text-2xl text-center mt-16 text-content mb-16'><b>Description: </b>{description}</p>
+      <p className='text-2xl text-center mt-16 text-white mb-16 border-2 border-white w-1/2 h-24 rounded-full bg-contentBackground flex justify-center items-center'>
+  <b>Description: </b>{description}
+</p>
+
 
       </div>
       <Footer/>

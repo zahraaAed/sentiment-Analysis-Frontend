@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
-import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import axios from 'axios';
+import app from '../components/firebase.jsx';
+import { FaEye, FaEyeSlash,FaGoogle } from 'react-icons/fa';
 import Logo from "../assets/Logo.png";
 
 const SignUp = () => {
@@ -15,6 +17,7 @@ const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const auth = getAuth(app);
   const handleInputChange = (e) => {
     setSignUp({ ...signUp, [e.target.name]: e.target.value });
   };
@@ -41,6 +44,18 @@ const SignUp = () => {
       }, 3000);
     } catch (error) {
       console.log("failed to register", error.message);
+    }
+  };
+  const registerWithGoogle = async () => {
+    const provider = new GoogleAuthProvider();
+
+    try {
+      const result = await signInWithPopup(auth, provider);
+      const user = result.user;
+      console.log('User signed in with Google:', user);
+      navigate("/login");
+    } catch (error) {
+      console.error('Error during Google Sign-In:', error.message);
     }
   };
 
@@ -91,15 +106,15 @@ const SignUp = () => {
               </span>
             </div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
-            <input
-              type="text"
-              id="email"
-              name="email"
-              value={signUp.email}
-              onChange={handleInputChange}
-              required
-              className="mt-1 block w-full px-3 py-2 border border-gray-100 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-pink-500 focus:border-pink-500 sm:text-sm"
-            />
+<input
+  type="text"
+  id="email"
+  name="email"
+  value={signUp.email}
+  onChange={handleInputChange}
+  required
+  className="bg-emailbg mt-1 block w-full px-3 py-2 border border-gray-100 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-pink-500 focus:border-pink-500 sm:text-sm"
+/>
             <div className="role-field">
               <label htmlFor="role" className="block text-sm font-medium text-gray-700">Role</label>
               <select
@@ -118,6 +133,14 @@ const SignUp = () => {
             <button type="submit" className="w-full mt-8 flex justify-center cursor-pointer py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-gradient-to-r from-pink-500 to-purple-800 hover:from-pink-600 hover:to-purple-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
               SIGN UP
             </button>
+            <div className="flex flex-col items-center">
+ 
+  <button onClick={registerWithGoogle} className=" w-full flex items-center justify-center mt-2 bg-transparent hover:bg-white cursor-pointer hover:text-pink-700 border border-pink-700 hover:border-content font-bold py-2 px-4 sm:py-1 sm:px-2 md:py-1.5 md:px-2.5 lg:py-2 lg:px-4 font-sans rounded-md">
+    <FaGoogle className="mr-2" style={{ color: 'purple' }} /> Sign up with Google
+  </button>
+</div>
+
+
           </form>
         </div>
         </div>
