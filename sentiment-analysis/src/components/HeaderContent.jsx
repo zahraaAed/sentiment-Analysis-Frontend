@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 function HeaderContent() {
   return (
     <div className="containerppp">
@@ -16,7 +17,7 @@ function HeaderContent() {
         </p>
 
         <button className="bg-pink-700 text-white w-full sm:w-48 h-10 rounded cursor-pointer font-bold hover:bg-content mt-4 mt-9 rounded-full " >
-          Get Started
+        <Link to="/analysis" >Get Started</Link>
         </button>
       </div>
       <div>

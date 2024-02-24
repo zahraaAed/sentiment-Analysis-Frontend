@@ -5,6 +5,8 @@ import Login from './pages/Login'
 import HomePage from './pages/HomePage'
 import SignUp from './pages/Registration'
 import AnalysisPage from './pages/AnalysisPage'
+import Aboutus from './pages/Aboutus'
+import Contactus from './pages/Contactus'
 function App() {
   
 
@@ -16,8 +18,10 @@ function App() {
       
       <Route path="/" element={<HomePage />} /> 
       <Route path="/login" element={<Login />} /> 
-      <Route path="/register" element={<SignUp/>} /> 
+      <Route path="/signup" element={<SignUp/>} /> 
       <Route path="/analysis" element={<AnalysisPage/>} /> 
+      <Route path="/aboutus" element={<Aboutus/>} /> 
+      <Route path="/contactus" element={<Contactus/>} /> 
       </Routes>
     </Router>
     </>

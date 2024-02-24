@@ -12,17 +12,20 @@ const Login = () => {
     username: '',
     password: '',
   });
+  const [alertMessage, setAlertMessage] = useState('');
   const [googleLogin, setGoogleLogin] = useState(false); //  state to track Google login
   const [loginSuccess, setLoginSuccess] = useState(false); // state to track login success
   const auth = getAuth(app);
   const navigate = useNavigate();
-
   useEffect(() => {
-    // Navigate to analysis page if both login attempts are successful
-    if (loginSuccess && googleLogin) {
-      navigate('/analysis');
+    if (loginSuccess || googleLogin) {
+      setAlertMessage('You have successfully logged in!');
+      setTimeout(() => {
+        navigate('/analysis');
+      }, 2000); 
     }
-  }, [loginSuccess, googleLogin, navigate]);
+}, [loginSuccess, googleLogin, navigate]);
+
 
   const handleInputChange = (e) => {
     setLogin({ ...login, [e.target.name]: e.target.value });
@@ -33,12 +36,14 @@ const Login = () => {
     try {
       const response = await axios.post('http://localhost:4000/api/user/login', login, { withCredentials: true });
       console.log("You were successfully logged in");
-      setLoginSuccess(true); // Set login success flag
+      setLoginSuccess(true); 
+      setAlertMessage('You have successfully logged in!'); 
     } catch (error) {
       const errorMessage = error.response.data.error || 'Login failed. Please try again.';
       console.error(errorMessage);
     }
   };
+  
 
   const registerWithGoogle = async () => {
     const provider = new GoogleAuthProvider();
@@ -46,7 +51,8 @@ const Login = () => {
       const result = await signInWithPopup(auth, provider);
       const user = result.user;
       console.log('User signed in with Google:', user);
-      setGoogleLogin(true); // Set Google login state to true
+      setGoogleLogin(true); 
+      setAlertMessage('You have successfully logged in!'); 
     } catch (error) {
       console.error('Error during Google Sign-In:', error.message);
     }
@@ -107,6 +113,11 @@ const Login = () => {
           </p>
         </form>
       </div>
+      {alertMessage && (
+        <div className="bg-green-200 text-green-800 p-3 rounded-md mt-3">
+          {alertMessage}
+        </div>
+      )}
     </div>
   );
 };

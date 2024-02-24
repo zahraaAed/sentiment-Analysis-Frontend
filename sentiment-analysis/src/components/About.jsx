@@ -1,6 +1,6 @@
 import React from 'react';
 import sentiment from "../assets/sentiment.png";
-
+import { Link } from 'react-router-dom';
 function About() {
   return (
     <div className="w-full p-10 px-6 mt-6 text-3xl text-white flex flex-row justify-center items-center">
@@ -10,7 +10,7 @@ function About() {
         <h1 className='text-pink-700 mb-4'>ABOUT TONIFY</h1>
         <p className="text-content mb-4 text-3xl">Sentiment analysis empowers you to decipher the emotions and opinions expressed about your brand, products, and services across various channels.</p>
         <p className=" hover:bg-white text-content hover:text-pink-700 border border-white text-sm py-1 px-2 sm:py-1 sm:px-2 md:py-1 md:px-2 lg:py-1 lg:px-2 font-sans rounded-full">
-          MORE ABOUT US
+        <Link to="/aboutus" >MORE ABOUT US</Link>
         </p>
       </div>
       

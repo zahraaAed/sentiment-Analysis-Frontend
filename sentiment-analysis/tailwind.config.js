@@ -10,7 +10,8 @@ export default {
         'Background':'#D0B5DD',
         'content':'#49003d',
         'contentBackground':'#8e134f',
-        'emailbg':'#e8f0fe'
+        'emailbg':'#e8f0fe',
+        "about":"#7e4a84"
       },
       width: {
         "150px": "150px",
