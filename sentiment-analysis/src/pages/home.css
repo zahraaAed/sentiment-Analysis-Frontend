@@ -1,0 +1,26 @@
+.containerimage {
+    height: 100%; /* Set initial height to cover entire screen */
+    width: 100%; /* Set initial width to cover entire screen */
+  }
+  
+  @media (max-width: 823px) {
+    .containerimage {
+      height: 70vh; /* Adjust height for 823px width */
+      width: 100vw; /* Adjust width for 823px width */
+    }
+  }
+  
+  @media (max-width: 710px) {
+    .containerimage {
+      height: 60vh; /* Adjust height for 710px width */
+      width: 100vw; /* Adjust width for 710px width */
+    }
+  }
+  
+  @media (max-width: 455px) {
+    .containerimage {
+      height: 50vh; /* Adjust height for 455px width */
+      width: 100vw; /* Adjust width for 455px width */
+    }
+  }
+  

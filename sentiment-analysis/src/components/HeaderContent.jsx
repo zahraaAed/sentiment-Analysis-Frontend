@@ -1,12 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
-function HeaderContent() {
+// Change this line to use named import
+import { ReactTyped } from "react-typed";
+
+const HeaderContent = () => {
   return (
     <div className="containerppp">
       <div className="flex justify-start">
         <h1 className="text-5xl sm:text-4xl md:text-5xl lg:text-6xl text-content mt-10 font-bold mt-64 p-7">
-          Sentiment Analysis
+        <ReactTyped strings={["Sentiment Analysis", "Opinion Mining"]} typeSpeed={100} loop />
         </h1>
+        {/* <h1> <ReactTyped strings={["Sentiment Analysis"]} typeSpeed={100} loop /></h1> */}
       </div>
       <div className="flex flex-col ijustify-start mt-4 p-7">
         <p className="text-2xl sm:text-xl md:text-2xl lg:text-3xl text-content">

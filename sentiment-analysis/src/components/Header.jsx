@@ -1,15 +1,17 @@
 import React from 'react';
 import Logo from "../assets/Logo.png";
 import { Link } from 'react-router-dom';
-function Header() {
+const Header=() =>{
   return (
     <div className="w-full bg-content p-3 px-6">
       <div className="flex flex-col sm:flex-row justify-between items-center">
         <div>
-          <img src={Logo} alt='logo' className="w-32 h-auto sm:w-48 md:w-64 lg:w-150px" />
+        <Link to="/">
+        <img src={Logo} alt='logo' className="w-32 h-auto sm:w-36 md:w-64 lg:w-48 max-w-full" />
+      </Link>
         </div>
 
-        <ul className='flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-28 md:space-x-20 lg:space-x-28 xl:space-x-32'>
+        <ul className='flex flex-col sm:flex-row justify-center items-center sm:space-x-8 md:space-x-8 lg:space-x-12 xl:space-x-16'>
           <li className="text-white text-lg hover:underline hover:font-bold cursor-pointer transition-all duration-200 font-sans"><Link to="/aboutus" >About</Link></li>
           <li className="text-white text-lg hover:underline hover:font-bold cursor-pointer transition-all duration-200 font-sans"><Link to="/analysis" >Analysis Section</Link></li>
           <li className="text-white  text-lg hover:underline hover:font-bold  cursor-pointer transition-all duration-200 font-sans"><Link to="/contactus" >Contact </Link></li>
