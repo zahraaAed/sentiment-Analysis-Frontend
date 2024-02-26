@@ -42,7 +42,7 @@ const Chat = () => {
     <div>
   
       <button onClick={toggleChat} className="fixed bottom-0 right-0 m-4 p-4 bg-content text-white rounded-full ">
-      <FaComment size={48} />
+      <FaComment size={48} /> 
       </button>
 
     

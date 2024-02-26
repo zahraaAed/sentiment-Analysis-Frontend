@@ -96,7 +96,7 @@ const AnalysisPage=()=> {
   return (
     <div>
       <Header />
-      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center mt-8 sm:mt-16 text-content mx-4">
+      <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-5xl text-center mt-8 sm:mt-16 text-content mx-4">
         <b>Peek Inside the Minds: </b>Where Words Speak <br /> Louder Than Text.
         <b>Explore our analysis page</b>
         <br /> for a journey into the heart of sentiments.
@@ -119,7 +119,7 @@ const AnalysisPage=()=> {
       />
       <button
         onClick={handleSubmit}
-        className="text-xl mt-8 mx-auto w-1/2 flex justify-center items-center cursor-pointer py-2 px-4 border border-transparent rounded-full shadow-sm  font-medium text-white bg-gradient-to-r from-pink-500 to-content hover:from-pink-600 hover:to-purple-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+        className="text-xl mt-8 mx-auto w-1/4 flex justify-center items-center cursor-pointer py-2 px-4 border border-transparent rounded-full shadow-sm  font-medium text-white bg-gradient-to-r from-pink-500 to-content hover:from-pink-600 hover:to-purple-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
       >
         {loading ? "Analyzing..." : "Analyze"}
       </button>

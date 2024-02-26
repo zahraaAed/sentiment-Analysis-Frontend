@@ -3,8 +3,9 @@ import { FaUser, FaEnvelope, FaComments } from 'react-icons/fa';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import axios from 'axios';
-
-const Contactus = () => {
+import { useFeedback } from '../components/feedbackContext';
+const Contactus = ({ onFeedbackSubmitted }) => {
+  const { fetchFeedbacks } = useFeedback();
   const [contact, setContact] = useState({
     username: '',
     email: '',
@@ -26,6 +27,10 @@ const Contactus = () => {
       setAlert(true);
       setAlertMessage('You have successfully submitted your feedback!');
       console.log("Feedback submitted successfully");
+      // Call the callback function after successful submission
+      if (onFeedbackSubmitted) {
+        onFeedbackSubmitted();
+      }
     } catch (error) {
       setAlert(true);
       setAlertMessage('Failed to submit feedback. Please try again.');
@@ -48,7 +53,7 @@ const Contactus = () => {
         <h3 className="text-3xl text-content mt-16">"Have a question or feedback? We're here to help! Reach out to us and let us know how we can assist you."
 </h3>
         <div className="flex justify-center items-center flex-wrap ">
-        <form className="mt-24 w-full sm:w-2/3 md:w-1/2 lg:w-1/3 mx-8  shadow-lg rounded p-16">
+        <form onSubmit={handleSubmit} className="mt-24 w-full sm:w-2/3 md:w-1/2 lg:w-1/3 mx-8  shadow-lg rounded p-16">
 
             <div className="relative mb-4">
               <span className="absolute inset-y-0 left-0 flex items-center pl-3">

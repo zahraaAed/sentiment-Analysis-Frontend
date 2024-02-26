@@ -21,7 +21,7 @@ const Login = () => {
     if (loginSuccess || googleLogin) {
       setAlertMessage('You have successfully logged in!');
       setTimeout(() => {
-        navigate('/analysis');
+        navigate('/');
       }, 2000); 
     }
 }, [loginSuccess, googleLogin, navigate]);

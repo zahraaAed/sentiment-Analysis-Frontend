@@ -9,7 +9,7 @@ const Article = () => {
       </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-48 mt-8">
-        <div className="max-w-md w-full bg-white shadow-md rounded-lg overflow-hidden mb-16">
+        <div className="max-w-lg w-full bg-white shadow-md rounded-lg overflow-hidden mb-16">
           <div className="p-4">
             <h2 className="text-xl md:text-2xl font-semibold text-pink-700 mb-4">
               Harnessing Sentiment Analysis for Business Success
@@ -41,7 +41,7 @@ const Article = () => {
           </div>
         </div>
 
-        <div className="max-w-md w-full bg-white shadow-md rounded-lg overflow-hidden mb-16">
+        <div className="max-w-lg w-full bg-white shadow-md rounded-lg overflow-hidden mb-16">
           <div className="p-4">
             <h2 className="text-xl md:text-2xl font-semibold text-pink-700 mb-4">
               Addressing Common Challenges in Sentiment Analysis
