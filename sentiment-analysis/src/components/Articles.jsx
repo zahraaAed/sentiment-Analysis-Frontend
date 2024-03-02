@@ -1,16 +1,21 @@
-import React from "react";
-
+import React ,{useEffect}from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import "./header.css"
 const Article = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
   return (
-    <div className="flex flex-col items-center">
-      <h1 className="text-4xl font-bold text-about relative mb-16 mt-16">
-        <span className="absolute inset-0 border-2 border-purple-700 rounded-lg animate-ping"></span>
-        Explore Engaging Articles
-      </h1>
+    <div className="flex flex-col items-center w-full">
+  <h1 className="text-4xl font-bold text-content relative mb-16 mt-16 sm:text-center text-center">
+  <span className="absolute inset-0 border-2 border-purple-700 rounded-lg animate-ping"></span>
+  Explore Engaging Articles
+</h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-48 mt-8">
-        <div className="max-w-lg w-full bg-white shadow-md rounded-lg overflow-hidden mb-16">
-          <div className="p-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-48 mt-8 ">
+        <div className="max-w-lg w-full bg-white shadow-md rounded-lg overflow-hidden mb-16 articles" data-aos="fade-down" >
+          <div className="p-4 flex flex-col justify-between  ">
             <h2 className="text-xl md:text-2xl font-semibold text-pink-700 mb-4">
               Harnessing Sentiment Analysis for Business Success
             </h2>
@@ -41,8 +46,8 @@ const Article = () => {
           </div>
         </div>
 
-        <div className="max-w-lg w-full bg-white shadow-md rounded-lg overflow-hidden mb-16">
-          <div className="p-4">
+        <div className="max-w-lg w-full bg-white shadow-md rounded-lg overflow-hidden mb-16 articles"  data-aos="fade-down">
+        <div className="p-4 flex flex-col justify-between">
             <h2 className="text-xl md:text-2xl font-semibold text-pink-700 mb-4">
               Addressing Common Challenges in Sentiment Analysis
             </h2>

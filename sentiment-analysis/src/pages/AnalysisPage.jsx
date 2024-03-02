@@ -88,6 +88,7 @@ const AnalysisPage=()=> {
       setChartData(updatedData);
     } catch (error) {
       console.error("Error submitting text:", error);
+   
     } finally {
       setLoading(false);
     }
@@ -96,30 +97,41 @@ const AnalysisPage=()=> {
   return (
     <div>
       <Header />
-      <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-5xl text-center mt-8 sm:mt-16 text-content mx-4">
-        <b>Peek Inside the Minds: </b>Where Words Speak <br /> Louder Than Text.
-        <b>Explore our analysis page</b>
-        <br /> for a journey into the heart of sentiments.
-      </h1>
+      <div className="text-center mt-16 mx-auto max-w-full mb-12 h-full">
+        <h1 className="text-5xl text-pink-700">
+          <b> Analyze With Us </b>
+        </h1>
 
-      <div className="flex justify-center mt-12">
+<h1 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl text-center mt-8 sm:mt-16 text-content mx-4 sm:mx-6 md:mx-12 lg:mx-32">
+  <b>Peek Inside the Minds: </b>Where Words Speak Louder Than Text.
+  <br className=" sm:mb-8 md:mb-6 lg:mb-4" />
+  <b>Explore our analysis page</b> for a journey into the heart of sentiments.
+</h1>
+
+</div>
+
+      <div className="flex justify-center">
         <img
           src={Analysis}
           className="w-full lg:w-1/2 h-auto px-4 align-middle rounded-lg"
           alt="Analysis"
         />
       </div>
-
       <input
-        type="text"
-        value={text}
-        onChange={(e) => setText(e.target.value)}
-        className="mt-16 mx-auto block w-5/6 h-32 px-3 py-2 border-4 border-pink-700 rounded-md shadow-lg shadow-indigo-500/50 bg-blend-difference placeholder-gray-500 focus:outline-none focus:ring-pink-500 focus:border-pink-500 sm:text-lg"
-        placeholder="Enter your text here..."
-      />
+  type="text"
+  value={text}
+  onChange={(e) => setText(e.target.value)}
+  className="mt-8  sm:mt-8 md:mt-12 lg:mt-16 mx-auto sm:mx-4 md:mx-16 lg:mx-32 block w-2/3 sm:w-1/2 h-32 px-3 py-2 border-4 border-pink-700 rounded-md shadow-lg shadow-indigo-500/50 bg-blend-difference placeholder-gray-500 focus:outline-none focus:ring-pink-500 focus:border-pink-500 lg:text-2xl sm:text-sm sm:text-center"
+  placeholder="Enter your text here..."
+/>
+
+
+
+
+
       <button
         onClick={handleSubmit}
-        className="text-xl mt-8 mx-auto w-1/4 flex justify-center items-center cursor-pointer py-2 px-4 border border-transparent rounded-full shadow-sm  font-medium text-white bg-gradient-to-r from-pink-500 to-content hover:from-pink-600 hover:to-purple-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+        className="text-xl mt-8 mx-auto w-48 flex justify-center items-center cursor-pointer py-2 px-4 border border-transparent rounded-full shadow-sm  font-medium text-white bg-gradient-to-r from-pink-500 to-content hover:from-pink-600 hover:to-purple-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
       >
         {loading ? "Analyzing..." : "Analyze"}
       </button>
@@ -138,7 +150,7 @@ const AnalysisPage=()=> {
             height="530"
             data={chartData}
             options={options}
-            className="mt-8 sm:mt-12 mx-auto block w-full max-w-lg h-auto px-3 py-2 shadow-lg shadow-indigo-500/50 bg-blend-difference placeholder-gray-500 focus:outline-none focus:ring-pink-500 focus:border-pink-500 text-lg sm:text-base"
+            className="mt-8 sm:mt-12 mx-auto block w-full max-w-lg h-auto px-3 py-2 shadow-lg shadow-indigo-500/50 bg-blend-difference placeholder-gray-500 focus:outline-none focus:ring-pink-500 focus:border-pink-500 text-lg sm:text-base sm:flex justify-center"
           />
         )}
         {description && (

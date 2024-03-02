@@ -1,20 +1,24 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect} from "react";
 import Header from "../components/Header";
 import AboutImage from "../assets/AboutusImage.png";
 import Footer from "../components/Footer";
 import Article from "../components/Articles";
 import image from "../assets/border.png"
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Aboutus=()=> {
   const [activeSection, setActiveSection] = useState(0);
-
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
   return (
     <div>
       <Header />
-      <div className="text-center mt-16 text-content">
+      <div className="text-center mt-16 text-pink-700">
         <h1 className="text-5xl">
           <b> ABOUT US </b>
         </h1>
-        <p className="text-lg md:text-xl lg:text-2xl xl:text-3xl p-8 mx-4 md:mx-8 lg:mx-16 xl:mx-32">
+        <p className="text-lg md:text-xl lg:text-2xl xl:text-3xl p-8 mx-4 md:mx-8 lg:mx-16 xl:mx-32 text-content">
           Welcome to our sentiment analysis platform! Sentiment analysis, also
           known as opinion mining, is a powerful technique used to determine the
           sentiment expressed in text data. It involves analyzing textual
@@ -31,11 +35,11 @@ const Aboutus=()=> {
         />
       </div>
 
-      <div className="w-full bg-about p-5 md:p-10 mt-8 text-center text-lg md:text-xl lg:text-2xl text-white flex flex-wrap justify-center md:justify-evenly">
+      <div className="w-full bg-pink-700 p-5 md:p-10 mt-8 text-center text-lg md:text-xl lg:text-2xl text-white flex flex-wrap justify-center md:justify-evenly">
         <p
           className={`text-white cursor-pointer ${
             activeSection === 0 ? "font-bold underline shadow" : ""
-          } hover:text-content mx-2 my-2 md:mx-4 md:my-4 lg:mx-6 lg:my-6`}
+          } hover:text-content  my-2 md:mx-4 md:my-4 lg:my-6`}
           onClick={() => setActiveSection(0)}
         >
           How Sentiment Analysis Works
@@ -43,7 +47,7 @@ const Aboutus=()=> {
         <p
           className={`text-white cursor-pointer ${
             activeSection === 1 ? "font-bold underline shadow" : ""
-          } hover:text-content mx-2 my-2 md:mx-4 md:my-4 lg:mx-6 lg:my-6`}
+          } hover:text-content mx-2 my-2 md:mx-4 md:my-4 lg:mx-16 lg:my-6`}
           onClick={() => setActiveSection(1)}
         >
           Applications of Sentiment Analysis
@@ -51,15 +55,15 @@ const Aboutus=()=> {
         <p
           className={`text-white cursor-pointer ${
             activeSection === 2 ? "font-bold underline shadow" : ""
-          } hover:text-content mx-2 my-2 md:mx-4 md:my-4 lg:mx-6 lg:my-6`}
+          } hover:text-content mx-2 my-2 md:mx-4 md:my-4 lg:mx-16 lg:my-6`}
           onClick={() => setActiveSection(2)}
         >
           Our Mission
         </p>
       </div>
 
-      <div className={`mt-16 mx-8 text-content ${activeSection !== 0 ? "hidden" : ""}`}>
-        <h1 className="text-3xl mt-8 font-bold">How Sentiment Analysis Works?</h1>
+      <div className={`mt-16 mx-16 text-content ${activeSection !== 0 ? "hidden" : ""}`}>
+        <h1 className="text-3xl mt-8 font-bold text-pink-700">How Sentiment Analysis Works?</h1>
         <p className="text-xl md:text-2xl lg:text-3xl mt-8 mb-16">
           Sentiment analysis employs natural language processing (NLP) and machine
           learning algorithms to analyze text and identify sentiment. These
@@ -72,10 +76,10 @@ const Aboutus=()=> {
       </div>
 
       <div className={`mt-16 mx-8 text-content ${activeSection !== 1 ? "hidden" : ""}`}>
-        <h1 className="text-3xl mt-8 font-bold">Applications of Sentiment Analysis</h1>
+        <h1 className="text-3xl mt-8 font-bold text-pink-700">Applications of Sentiment Analysis</h1>
         <div className="mt-8 md:mt-16 mx-4 md:mx-8 lg:mx-16 text-content">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-16 mb-8 md:mb-16">
-            <div className="text-lg md:text-xl bg-content text-white p-4 md:p-8">
+            <div className="text-lg md:text-xl bg-pink-700 text-white p-4 md:p-8">
               <h1 className="text-lg md:text-xl mb-2 md:mb-4">
                 <b>Monitor Brand Reputation</b>
               </h1>
@@ -85,7 +89,7 @@ const Aboutus=()=> {
                 any negative feedback promptly.
               </p>
             </div>
-            <div className="text-lg md:text-xl bg-white border-2 border-content text-content p-4 md:p-8">
+            <div className="text-lg md:text-xl bg-white border-4 border-pink-700 text-content p-4 md:p-8">
               <h1 className="text-lg md:text-xl mb-2 md:mb-4">
                 <b>Understand Customer Feedback</b>
               </h1>
@@ -95,7 +99,7 @@ const Aboutus=()=> {
                 any negative feedback promptly.
               </p>
             </div>
-            <div className="text-lg md:text-xl bg-content text-white p-4 md:p-8">
+            <div className="text-lg md:text-xl bg-pink-700 text-white p-4 md:p-8">
               <h1 className="text-lg md:text-xl mb-2 md:mb-4">
                 <b>Market Research</b>
               </h1>
@@ -106,7 +110,7 @@ const Aboutus=()=> {
                 development.
               </p>
             </div>
-            <div className="text-lg md:text-xl bg-white border-2 border-content text-content p-4 md:p-8">
+            <div className="text-lg md:text-xl bg-white border-4 border-pink-700 text-content p-4 md:p-8">
               <h1 className="text-lg md:text-xl mb-2 md:mb-4">
                 <b>Risk Management</b>
               </h1>
@@ -120,8 +124,8 @@ const Aboutus=()=> {
         </div>
       </div>
 
-      <div className={`mt-16 mx-8 text-content ${activeSection !== 2 ? "hidden" : ""}`}>
-        <h1 className="text-3xl mt-8 font-bold">Our Mission</h1>
+      <div className={`mt-16 mx-16 text-content ${activeSection !== 2 ? "hidden" : ""}`}>
+        <h1 className="text-3xl mt-8 font-bold text-pink-700">Our Mission</h1>
         <p className="text-xl md:text-2xl lg:text-3xl mt-8 mb-16">
           At Tonify, our mission is to provide you with a comprehensive tool for
           sentiment analysis in English. We aim to empower users to analyze text

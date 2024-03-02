@@ -7,18 +7,25 @@ import About from "../components/About";
 import Feedback from "../components/Feedback";
 import Footer from "../components/Footer";
 import "./home.css";
+import Bot from "../components/bot";
 const HomePage=()=> {
   return (
     <div>
-      <div
-        className="relative bg-center bg-no-repeat bg-cover h-screen custom-bg containerimage"
-        style={{ backgroundImage: `url(${BackgroundImage})` }}
-      >
+   <div
+  className="relative h-screen custom-bg containerimage"
+  style={{
+    backgroundImage: `url(${BackgroundImage})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+  }}
+>
         <Header />
         <HeaderContent />
         <UsageContent />
         <About />
         <Feedback/>
+        <Bot/>
         <Footer />
       </div>
     </div>

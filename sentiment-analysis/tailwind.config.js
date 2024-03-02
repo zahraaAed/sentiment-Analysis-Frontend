@@ -8,10 +8,11 @@ export default {
     extend: {
       colors:{
         'Background':'#D0B5DD',
-        'content':'#49003d',
+        'content':'#56003e',
         'contentBackground':'#8e134f',
         'emailbg':'#e8f0fe',
-        "about":"#7e4a84"
+        "about":"#7e4a84",
+        "pink-700":"#a92f68"
       },
       width: {
         "150px": "150px",
@@ -21,6 +22,7 @@ export default {
       
        "100%":"20%",
       },
+ 
     },
   },
   plugins: [],

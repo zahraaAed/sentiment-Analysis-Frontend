@@ -64,16 +64,20 @@ const SignUp = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-purple-300 to-pink-200 flex-col">
-     <Link to="/"> <img src={Logo} alt='logo' className="mx-auto w-32 h-auto sm:w-36 md:w-64 lg:w-48 mt-8" /></Link>
-      <h1 className="text-4xl font-bold text-pink-700 my-4 text-center">WELCOME TO TONIFY</h1>
-      <p className="text-lg text-content mb-4 text-center" >
-        We're thrilled to have you here. Please take a moment to sign up <br/>and unlock a world of possibilities.
+    <div className="flex items-center justify-center  h-full min-h-screen bg-gradient-to-r from-purple-300 to-pink-200 flex-col ">
+    
+     <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-pink-700 my-4 text-center">
+ Welcome To Tonify
+</h1>
+
+      <p className="text-2xl text-gray-600 mb-6 text-center" >
+        We're thrilled to have you here. Please take a moment to sign up and unlock a world of possibilities.
         <br/><b>Your journey begins now.</b> 
       </p>
-      <div className="bg-white p-8 shadow-lg w-full md:w-1/2 border border-gray-300 mt-8 ">
+
+      <div className="mt-12 sm:mt-0 w-full  md:w-1/2 lg:w-1/3 mx-8 bg-white shadow-lg rounded lg:p-8 h-full mb-8 loginForm">
         <div className="text-center mb-4">
-          <h1 className="text-2xl font-bold text-pink-700 mb-4">Sign Up</h1>
+        <Link to="/"> <img src={Logo} alt='logo' className="mx-auto w-32 h-auto sm:w-36 md:w-64 lg:w-48 " /></Link>
         </div>
         <form onSubmit={handleSubmit}>
           <label htmlFor="username">Username</label>
@@ -111,7 +115,7 @@ const SignUp = () => {
             value={signUp.email}
             onChange={handleInputChange}
             required
-            className="bg-emailbg mt-1 block w-full px-3 py-2 border border-gray-100 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-pink-500 focus:border-pink-500 sm:text-sm"
+            className=" mt-1 block w-full px-3 py-2 border border-gray-100 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-pink-500 focus:border-pink-500 sm:text-sm"
           />
           <div className="role-field">
             <label htmlFor="role" className="block text-sm font-medium text-gray-700">Role</label>
@@ -121,7 +125,7 @@ const SignUp = () => {
               value={signUp.role}
               onChange={handleInputChange}
               required
-              className="mt-1 block w-full px-3 py-2 border border-gray-100 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-pink-500 focus:border-pink-500 sm:text-sm"
+              className="mt-1 block w-full px-3 py-2 border border-gray-100 rounded-md shadow-sm  bg-white text-gray-400 focus:outline-none focus:ring-pink-500 focus:border-pink-500 sm:text-sm"
             >
               <option value="" disabled>Select a role</option>
               <option value="admin">Admin</option>

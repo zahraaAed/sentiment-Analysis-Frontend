@@ -1,25 +1,29 @@
 import React, { createContext, useState, useContext } from 'react';
 import axios from 'axios';
+
 const FeedbackContext = createContext();
 
 export const useFeedback = () => useContext(FeedbackContext);
 
 export const FeedbackProvider = ({ children }) => {
-  const [feedbacks, setFeedbacks] = useState([]);
+ const [feedbacks, setFeedbacks] = useState([]);
 
-  const fetchFeedbacks = async () => {
+ const fetchFeedbacks = async (subject) => {
     try {
       const response = await axios.get("http://localhost:4000/api/feedback", {
         withCredentials: true,
+        params: {
+          subject: subject, // Pass the subject as a query parameter
+        },
       });
       setFeedbacks(response.data);
       console.log("Feedbacks fetched successfully");
     } catch (error) {
       console.error("Error fetching feedbacks:", error.message);
     }
-  };
+ };
 
-const deleteFeedback = async (feedbackId) => {
+ const deleteFeedback = async (feedbackId) => {
     console.log("Deleting feedback with ID:", feedbackId); // Debugging line
     try {
       await axios.delete(`http://localhost:4000/api/feedback/${feedbackId}`, {
@@ -31,11 +35,11 @@ const deleteFeedback = async (feedbackId) => {
     } catch (error) {
       console.error("Error deleting feedback:", error.message);
     }
-  };
+ };
   
-  return (
+ return (
     <FeedbackContext.Provider value={{ feedbacks, fetchFeedbacks, deleteFeedback }}>
       {children}
     </FeedbackContext.Provider>
-  );
+ );
 };

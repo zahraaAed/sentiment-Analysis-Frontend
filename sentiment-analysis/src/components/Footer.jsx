@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <div className="bg-content">
       <footer className="text-center lg:text-left text-base lg:text-lg text-white px-6 lg:px-24">
-        <div className="container mx-auto flex justify-center lg:justify-between items-center py-4 sm:py-8">
+        <div className="container mx-auto flex lg:justify-between items-center py-4 sm:py-8">
           <img
             src={Logo}
             alt="logo"
@@ -49,6 +49,11 @@ const Footer = () => {
               <p>
                 <Link to={"/contactus"} className="text-white">
                   Contact
+                </Link>
+              </p>
+              <p>
+                <Link to={"/FAQs"} className="text-white">
+                  FAQs
                 </Link>
               </p>
             </div>
