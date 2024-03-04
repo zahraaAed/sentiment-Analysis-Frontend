@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaUser } from "react-icons/fa";
-import { useFeedback } from "../components/feedbackContext";
+import { useFeedback } from "./feedbackContext";
 import { Link } from "react-router-dom";
 const AdminFeedback = () => {
   const { feedbacks, fetchFeedbacks, deleteFeedback } = useFeedback();

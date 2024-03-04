@@ -66,7 +66,7 @@
 
 // export default AdminQuestion;
 import React, { useContext, useState,useEffect } from 'react';
-import { useFeedback } from "../components/feedbackContext";
+import { useFeedback } from "./feedbackContext";
 import AnswerModal from "./AnswerModal";
 import { FaUser } from "react-icons/fa";
 import './FAQs.css';
