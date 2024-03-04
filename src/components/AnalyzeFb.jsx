@@ -139,7 +139,7 @@ function fetchInstagramComments(postId) {
  const analyzeComments = async (comments) => {
     const commentsData = comments.map(comment => comment.text);
     try {
-      const response = await axios.post("http://localhost:4000/api/textSubmission", {commentsData},    {
+      const response = await axios.post("https://sentiment-analysis-backend-ohk1.onrender.com/api/textSubmission", {commentsData},    {
         withCredentials: true,
       }, {
         headers: {

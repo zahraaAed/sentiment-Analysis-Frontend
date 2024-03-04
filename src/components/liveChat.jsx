@@ -12,7 +12,7 @@ function App() {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await axios.get('http://localhost:4000/api/user', {
+        const response = await axios.get('https://sentiment-analysis-backend-ohk1.onrender.com/api/user', {
           withCredentials: true,
         });
         console.log("Response:", response);
@@ -31,7 +31,7 @@ function App() {
 
     const connectToWebSocket = () => {
       if (userId) {
-        const newSocket = io('http://localhost:4000', {
+        const newSocket = io('https://sentiment-analysis-backend-ohk1.onrender.com/', {
           withCredentials: true,
         });
 

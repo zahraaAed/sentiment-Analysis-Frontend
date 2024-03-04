@@ -12,7 +12,7 @@ export const FeedbackProvider = ({ children }) => {
 
  const fetchFeedbacks = async ({subject}) => {
     try {
-      const response = await axios.get("http://localhost:4000/api/feedback", {
+      const response = await axios.get("https://sentiment-analysis-backend-ohk1.onrender.com/api/feedback", {
         withCredentials: true,
         params: {
           subject: 'feedback', // Pass the subject as a query parameter
@@ -27,7 +27,7 @@ export const FeedbackProvider = ({ children }) => {
  };
  const fetchQuestions = async () => {
   try {
-     const response = await axios.get("http://localhost:4000/api/feedback", {
+     const response = await axios.get("https://sentiment-analysis-backend-ohk1.onrender.com/api/feedback", {
        withCredentials: true,
        params: {
          subject: 'question', // Fetch only questions
@@ -47,7 +47,7 @@ export const FeedbackProvider = ({ children }) => {
  
 // const fetchFeedbacks = async (subject) => {
 //   try {
-//      const response = await axios.get("http://localhost:4000/api/feedback", {
+//      const response = await axios.get("https://sentiment-analysis-backend-ohk1.onrender.com/api/feedback", {
 //        withCredentials: true,
 //        params: {
 //          subject: subject, // Ensure subject is correctly passed
@@ -71,7 +71,7 @@ export const FeedbackProvider = ({ children }) => {
  const deleteFeedback = async (feedbackId) => {
     console.log("Deleting feedback with ID:", feedbackId); // Debugging line
     try {
-      await axios.delete(`http://localhost:4000/api/feedback/${feedbackId}`, {
+      await axios.delete(`https://sentiment-analysis-backend-ohk1.onrender.com/api/feedback/${feedbackId}`, {
         withCredentials: true,
       });
       // Filter out the deleted feedback from the local state
@@ -84,7 +84,7 @@ export const FeedbackProvider = ({ children }) => {
  const deleteQuestion = async (questionId) => {
   console.log("Deleting question with ID:", questionId); // Debugging line
   try {
-     await axios.delete(`http://localhost:4000/api/feedback/${questionId}`, {
+     await axios.delete(`https://sentiment-analysis-backend-ohk1.onrender.com/api/feedback/${questionId}`, {
        withCredentials: true,
      });
      // Filter out the deleted question from the local state
@@ -99,7 +99,7 @@ export const FeedbackProvider = ({ children }) => {
   const userId = sessionStorage.getItem('userId');
 
   try {
-    const response = await axios.post('http://localhost:4000/api/feedback', {
+    const response = await axios.post('https://sentiment-analysis-backend-ohk1.onrender.com/api/feedback', {
       subject:"question",
       userId,
       answer,

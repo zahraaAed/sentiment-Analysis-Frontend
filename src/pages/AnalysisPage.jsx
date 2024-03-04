@@ -47,7 +47,7 @@ const AnalysisPage=()=> {
       setLoading(true);
 
       const response = await axios.post(
-        "http://localhost:4000/api/textSubmission",
+        "https://sentiment-analysis-backend-ohk1.onrender.com/api/textSubmission",
         { text },
         {
           withCredentials: true,
