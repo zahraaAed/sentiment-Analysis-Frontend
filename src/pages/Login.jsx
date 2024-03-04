@@ -34,7 +34,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://sentiment-analysis-backend-ohk1.onrender.com/api/user/login",
+        "https://sentiment-analysis-backend-ohk1.onrender.com/api/user/login", 
         login,
         { withCredentials: true }
       );
@@ -46,6 +46,7 @@ const Login = () => {
 
       // Setting the token as a cookie
       document.cookie = `token=${token}; path=/;`;
+      
       // Function to retrieve a specific cookie value by its name
       function getCookie(name) {
         const cookies = document.cookie.split(";");
