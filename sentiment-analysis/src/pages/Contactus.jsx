@@ -48,7 +48,7 @@ const Contactus = ({ onFeedbackSubmitted }) => {
     <div>
       <Header />
       <div className="text-center mt-16 mx-auto max-w-full mb-16 h-full">
-        <h1 className="text-5xl text-content">
+        <h1 className="text-5xl text-pink-700">
           <b> Contact US </b>
         </h1>
         <h3 className="text-2xl text-content md:text-xl lg:text-2xl xl:text-3xl p-8 mx-4 md:mx-8 lg:mx-16 xl:mx-32">

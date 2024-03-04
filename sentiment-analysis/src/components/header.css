@@ -57,5 +57,9 @@ flex-direction: column;
   
 
     }
+    .bot-container{
+width: 300px !important;
+
+    }
   
   }

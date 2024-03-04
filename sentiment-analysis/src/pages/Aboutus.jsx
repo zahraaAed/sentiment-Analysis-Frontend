@@ -4,13 +4,10 @@ import AboutImage from "../assets/AboutusImage.png";
 import Footer from "../components/Footer";
 import Article from "../components/Articles";
 import image from "../assets/border.png"
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 const Aboutus=()=> {
   const [activeSection, setActiveSection] = useState(0);
-  useEffect(() => {
-    AOS.init({ duration: 2000 });
-  }, []);
+
   return (
     <div>
       <Header />

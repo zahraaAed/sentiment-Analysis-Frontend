@@ -8,6 +8,7 @@ const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
+
   const login = async (username, password) => {
     try {
       const response = await axios.post('http://localhost:4000/api/user/login', { username, password }, { withCredentials: true });
@@ -52,13 +53,9 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  const logout = () => {
-    // Perform logout logic here
-    setUser(null);
-  };
 
   return (
-    <AuthContext.Provider value={{ user, login, loginWithGoogle, logout }}>
+    <AuthContext.Provider value={{ user, login, loginWithGoogle }}>
       {children}
     </AuthContext.Provider>
   );

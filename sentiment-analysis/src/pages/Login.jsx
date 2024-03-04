@@ -22,7 +22,7 @@ const Login = () => {
       setAlertMessage("You have successfully logged in!");
       setTimeout(() => {
         navigate("/");
-      }, 1000);
+      }, 3000);
     }
   }, [loginSuccess, googleLogin, navigate]);
 

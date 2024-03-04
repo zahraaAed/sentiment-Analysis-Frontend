@@ -77,11 +77,12 @@ const Bot = () => {
   };
  return (
     <div>
-      <button onClick={toggleChat} className="fixed bottom-0 right-0 m-4 p-4 bg-content text-white rounded-full ">
-        <FaComment size={48} />
-      </button>
+     <button onClick={toggleChat} className="fixed bottom-0 right-0 m-4 p-4 bg-content text-white rounded-full sm:w-16 sm:h-16 lg:w-20 lg:h-20">
+  <FaComment size={24} className="sm:w-8 sm:h-8 lg:w-10 lg:h-10" />
+</button>
+
       {isOpen && (
-        <div className="fixed bottom-24 right-0 w-96 h-96 bg-gray-200 border border-gray-300 rounded-lg shadow-lg overflow-auto flex flex-col justify-between ">
+        <div className="fixed bottom-24 right-0 lg:w-96 sm:w-32 h-96 bg-gray-200 border border-gray-300 rounded-lg shadow-lg overflow-auto flex flex-col justify-between bot-container">
           <div className="flex justify-between items-center bg-white text-content font-bold p-4">
             <h2>Chat with Tonify</h2>
             <button onClick={toggleChat} className="text-content">X</button>

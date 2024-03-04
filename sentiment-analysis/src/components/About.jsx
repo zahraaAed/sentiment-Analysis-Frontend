@@ -1,12 +1,9 @@
-import React,{useEffect} from 'react';
+import React from 'react';
 import sentiment from "../assets/sentiment.png";
 import { Link } from 'react-router-dom';
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 const About=()=> {
-  useEffect(() => {
-    AOS.init({ duration: 1000 });
-  }, []);
+
   return (
     <div className="w-full p-10 px-6 mt-6 text-xl lg:text-3xl text-white flex flex-col lg:flex-row justify-center items-center">
       <img src={sentiment} className='w-full lg:w-1/2 px-8 mb-8 lg:mb-0' alt="Sentiment Analysis"data-aos="zoom-in" />
@@ -16,7 +13,7 @@ const About=()=> {
         {/* <p className="hover:bg-white text-content hover:text-pink-700 border border-white text-sm py-1 px-2 sm:py-1 sm:px-2 md:py-1 md:px-2 lg:py-1 lg:px-2 font-sans rounded-full">
           <Link to="/aboutus">MORE ABOUT US</Link>
         </p> */}
-<p className="text-pink-700 border border-white text-sm py-1 px-2 sm:py-1 sm:px-2 md:py-1 md:px-2 lg:py-1 lg:px-2 font-sans rounded-full animate-bounce">
+<p className="text-pink-700 border border-white text-sm py-1 px-2 sm:py-1 sm:px-2 md:py-1 md:px-2 lg:py-1 lg:px-2 font-sans rounded-full ">
   <Link to="/aboutus">MORE ABOUT US</Link>
 </p>
 

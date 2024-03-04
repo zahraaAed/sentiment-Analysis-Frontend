@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navigate, useLocation } from 'react-router-dom';
+import { Navigate} from 'react-router-dom';
 
 const ProtectedRoute = ({ requiredRole, children }) => {
  // Assuming you have a way to check if the user is authenticated and get the user's role

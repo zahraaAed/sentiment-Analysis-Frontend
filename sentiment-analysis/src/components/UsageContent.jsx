@@ -2,13 +2,10 @@ import React, { useEffect } from "react";
 import effeciencyIcon from "../assets/effeciency.png";
 import flexibilityIcon from "../assets/flexibility.png";
 import educationIcon from "../assets/education.png";
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 import "./header.css";
 const UsageContent = () => {
-  useEffect(() => {
-    AOS.init({ duration: 1000 });
-  }, []);
+
   return (
     <>
       <div className="w-full bg-content p-10 px-6 mt-64 text-center text-2xl text-white">
@@ -19,7 +16,7 @@ const UsageContent = () => {
           Multi-Page Business Template Engineered to Accelerate Your Success.
         </p>
       </div>
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-center md:space-y-8 mt-10 space-y-4 md:space-x-16 lg:space-x-32" data-aos="fade-bottom">
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-center md:space-y-8 mt-10 space-y-4 md:space-x-16 lg:space-x-32" >
         <div className="w-full md:w-1/2 p-4 md:p-8 text-center border-2 border-purple-700 rounded-lg relative h-80 mx-2 sm:mx-4 mt-4 sm:mt-8 cursor-pointer sm:w-60 md:w-1/2 lg:w-1/4 lg:mx-0 transform hover:scale-105 transition duration-300 hover:bg-purple-200 usage-content">
           <div className="bg-purple-200 rounded-full w-20 h-20 flex items-center justify-center absolute -top-10 left-1/2 transform -translate-x-1/2">
             <img src={effeciencyIcon} alt="Efficiency" className="w-14 h-14" />

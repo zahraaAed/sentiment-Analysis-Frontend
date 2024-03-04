@@ -3,13 +3,10 @@ import { FaUser } from 'react-icons/fa';
 import { useFeedback } from './feedbackContext';
 import { Link } from 'react-router-dom';
 import "./header.css"
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 
 const Feedback = () => {
-  useEffect(() => {
-    AOS.init({ duration: 1000 });
-  }, []); 
+
   
   const { feedbacks, fetchFeedbacks } = useFeedback();
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -45,7 +42,7 @@ const Feedback = () => {
 
       <div className="flex-col h-100 mb-16 mt-16 overflow-hidden  ">
         {feedbacks.slice(currentSlide * 3, (currentSlide + 1) * 3).map((feedback, index) => (
-       <div key={index} className="p-4 border border-gray-300 rounded-md shadow-md mb-4 bg-purple-200 text-pink-700 w-full lg:w-2/3 mx-auto feedbacks" data-aos="fade-top">
+       <div key={index} className="p-4 border border-gray-300 rounded-md shadow-md mb-4 bg-purple-200 text-pink-700 w-full lg:w-2/3 mx-auto feedbacks" >
        <h3 className="text-lg font-semibold mb-2 flex items-center">
          <FaUser className="mr-2" /> {feedback.userId.username}
        </h3> 
