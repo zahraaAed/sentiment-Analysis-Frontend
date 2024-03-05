@@ -88,7 +88,7 @@ function App() {
               </ProtectedRoute>
             } />
             <Route path="/analysis" element={
-              <ProtectedRoute>
+              <ProtectedRoute requiredRole={null}>
                 <AnalysisPage />
               </ProtectedRoute>
             } />
