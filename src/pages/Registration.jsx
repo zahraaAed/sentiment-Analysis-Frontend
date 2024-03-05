@@ -27,7 +27,7 @@ const SignUp = () => {
 
     try {
       const response = await axios.post(
-         " https://sentiment-analysis-backend-ohk1.onrender.com/api/user/register",
+         " https://sentiment-analysis-backend-2-jmtz.onrender.com/api/user/register",
         signUp
       );
       console.log(response.data);

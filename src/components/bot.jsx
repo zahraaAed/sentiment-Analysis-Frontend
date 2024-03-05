@@ -44,7 +44,7 @@ const Bot = () => {
   const handleSendMessage = () => {
     const options = {
       method: "POST",
-      url: "https:/ https://sentiment-analysis-backend-ohk1.onrender.com/api.edenai.run/v2/text/chat",
+      url: "https:/ https://sentiment-analysis-backend-2-jmtz.onrender.com/api.edenai.run/v2/text/chat",
       headers: {
         authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYjEyYmIyYzktODIxNi00ZWY3LThiNzYtMWE2OTQyY2ZhNzdlIiwidHlwZSI6ImFwaV90b2tlbiJ9.jdPcgVAOu4mviAQpRysu0hfUSYLqDlmVojvgwjvscHQ",
       },
