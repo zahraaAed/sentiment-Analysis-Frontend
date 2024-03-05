@@ -22,7 +22,7 @@ const Contactus = ({ onFeedbackSubmitted }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("/api/feedback", contact, {
+      await axios.post(" https://sentiment-analysis-backend-ohk1.onrender.com/api/feedback", contact, {
         withCredentials: true,
       });
       setAlert(true);

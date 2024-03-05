@@ -12,7 +12,7 @@ function App() {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await axios.get('/api/user', {
+        const response = await axios.get(' https://sentiment-analysis-backend-ohk1.onrender.com/api/user', {
           withCredentials: true,
         });
         console.log("Response:", response);
@@ -84,7 +84,7 @@ export default App;
   // useEffect(() => {
   //   const fetchFeedbacks = async () => {
   //     try {
-  //       const response = await axios.get("http://localhost:4000/api/feedback", {
+  //       const response = await axios.get("http://localhost:4000 https://sentiment-analysis-backend-ohk1.onrender.com/api/feedback", {
   //         withCredentials: true,
   //       });
   //       setFeedbacks(response.data);
