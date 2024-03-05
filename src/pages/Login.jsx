@@ -34,7 +34,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        `/login`,
+        "/api/user/login",
         login,
         { withCredentials: true }
       );
