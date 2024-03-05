@@ -79,24 +79,27 @@ function App() {
             {/* <Route path="/fb" element={<FacebookLogin/>} /> */}
             <Route path="/facebook" element={<FacebookLogin/>} />
             <Route path="/analyze" element={<InstagramCommentAnalyzer/>} />
+            <Route path="/analysis" element={<AnalysisPage/>} />
+            <Route path="/contactus" element={<Contactus/>} />
+            <Route path="/admin" element={<Admin/>} />
             {/* <Route path="/FB" element={<AuthFbLayout><FacebookLogin /></AuthFbLayout>} /> */}
             {/* <Route path="/analyze" element={<AuthFbLayout><InstagramCommentAnalyzer /></AuthFbLayout>} /> */}
             <Route path="/App" element={<Appi />} />
-            <Route path="/admin" element={
+            {/* <Route path="/admin" element={
               <ProtectedRoute requiredRole="admin">
                 <Admin />
               </ProtectedRoute>
-            } />
-            <Route path="/analysis" element={
+            } /> */}
+            {/* <Route path="/analysis" element={
               <ProtectedRoute requiredRole={null}>
                 <AnalysisPage />
               </ProtectedRoute>
-            } />
-            <Route path="/contactus" element={
+            } /> */}
+            {/* <Route path="/contactus" element={
               <ProtectedRoute>
                 <Contactus />
               </ProtectedRoute>
-            } />
+            } /> */}
           </Routes>
         </Router>
       </FeedbackProvider>
