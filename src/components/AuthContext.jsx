@@ -11,7 +11,7 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (username, password) => {
     try {
-      const response = await axios.post('https://sentiment-analysis-backend-ohk1.onrender.com/api/user/login', { username, password }, { withCredentials: true });
+      const response = await axios.post('/api/user/login', { username, password }, { withCredentials: true });
       const token = response.data.token;
       document.cookie = `token=${token}; path=/;`;
 

@@ -34,7 +34,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://sentiment-analysis-backend-ohk1.onrender.com/api/user/login", 
+        "/api/user/login",
         login,
         { withCredentials: true }
       );
