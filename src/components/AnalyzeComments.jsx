@@ -92,7 +92,7 @@ const handleSubmit = async (event) => {
   const analyzeComments = async (comments) => {
     const commentsData = comments.map(comment => comment.message);
     try {
-      const response = await axios.post("https://sentiment-analysis-backend-2-jmtz.onrender.com/api/textSubmission", { commentsData }, {
+      const response = await axios.post("https://sentiment-analysis-backend-ohk1.onrender.com/api/textSubmission", { commentsData }, {
         withCredentials: true,
         headers: {
           'Content-Type': 'application/json',
