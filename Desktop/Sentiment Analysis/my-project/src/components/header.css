@@ -1,0 +1,65 @@
+.containerppp{
+    height: 60vh;
+}
+.active {
+  background-color: #a92f68 !important; 
+ 
+  border: 1px solid white;
+  padding:8px !important;
+ 
+  border-radius: 40px;
+  font-size: 17px;
+
+
+
+}
+.hide-on-mobile {
+    display: none;
+  }
+  
+  @media (max-width: 640px) {
+    .hide-on-mobile {
+      display: block;
+      background-color: blueviolet;
+    }
+    
+    .show-on-mobile {
+      display: none;
+      background-color: blueviolet;
+    }
+  }
+  @media (max-width: 640px) {
+    .feedbacks {
+      width:70% !important;
+    display: flex;
+flex-direction: column;
+    }
+    .button-feedback{
+      margin-left: 20px !important;
+    }
+     .button-feedback-right{
+      margin-right: 20px !important;
+    }
+  }
+  @media (max-width: 640px) {
+    .usage-content{
+
+    margin-bottom: 30px !important;
+    width: 300px !important;
+    }
+  
+  }
+  @media (max-width: 640px) {
+    .articles{
+
+   
+    width: 300px !important;
+  
+
+    }
+    .bot-container{
+width: 300px !important;
+
+    }
+  
+  }

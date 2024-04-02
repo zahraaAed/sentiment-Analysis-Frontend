@@ -1,0 +1,23 @@
+@media only screen and (max-width: 768px) {
+  .containerimage {
+    background-image: none !important;  
+  background-color: #49003d !important;
+ height: 400px !important;
+    
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .containerimage {
+    background-image: none !important; /* Hide the background image */
+   
+  }
+}
+@media only screen and (max-width: 768px) {
+  .loginForm{
+
+width: 300px !important;
+padding: 25px !important;
+
+  }
+}

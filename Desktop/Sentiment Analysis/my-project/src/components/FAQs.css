@@ -1,0 +1,75 @@
+.accordion {
+    width: 85%;
+    margin: auto;
+  }
+  
+  .accordion-item {
+    border: 1px solid #ddd;
+    margin-bottom: 16px;
+  }
+
+  /* .question:after {
+   content: '▼';
+ 
+   float: inline-end;
+   font-size: larger;
+   color: #33481B;
+   transition: transform 0.5s ease;
+  } */
+  
+  /* .question {
+    padding: 15px;
+    cursor: pointer;
+    background-color: #e9d5ff;
+    
+  } */
+  /* .question:before {
+   content: '> ';
+   color: #33481B;
+   margin-right: 4px;
+ 
+  } */
+  
+  .answer {
+    padding: 15px;
+    border-top: 1px solid #ddd;
+  
+  }
+  
+  .open .answer {
+    display: block;
+  }
+  
+  /* .open .question:after {
+   transform: rotate(180deg);
+  } */
+  .accordion-item {
+    border: 1px solid #ddd;
+    display: flex; /* Ensure the container is a flex container */
+    flex-direction: column; /* Stack children vertically */
+   }
+   
+   .question {
+  
+    cursor: pointer;
+  
+    display: flex; /* Make the question a flex container */
+
+    justify-content: space-between; /* Space out the items */
+   }
+   
+   .question-after {
+    color: #33481B;
+    font-size: larger;
+    transition: transform 0.5s ease;
+   }
+   
+   .open .question-after {
+    transform: rotate(180deg);
+   }
+   
+   .answer {
+    padding: 15px;
+    border-top: 1px solid #ddd;
+   }
+   
